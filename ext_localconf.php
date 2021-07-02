@@ -5,7 +5,7 @@ call_user_func(
         // TODO: Add hook for Extbase -> to handle records modified through
         // Frontend and backend modules not using datahandler
 
-        $GLOBALS['TYPO3_CONF_VARS'] = TYPO3\CMS\Extbase\Utility\ArrayUtility::arrayMergeRecursiveOverrule(
+        $GLOBALS['TYPO3_CONF_VARS'] = \TYPO3\CMS\Core\Utility\ArrayUtility::mergeRecursiveWithOverrule(
             $GLOBALS['TYPO3_CONF_VARS'],
             [
                 'SC_OPTIONS' => [
